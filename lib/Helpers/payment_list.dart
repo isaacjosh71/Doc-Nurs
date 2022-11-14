@@ -1,0 +1,32 @@
+
+const List februaryList = [
+{'id': 'ID #0012345',
+'amount': 'N 3600',
+'status':'Completed',
+'date':'9, Feb 2022',
+'time':'2:37 AM',
+},{'id': 'ID #056778',
+'amount': 'N 1600',
+'status':'Failed',
+'date':'9, Feb 2022',
+'time':'2:37 AM',
+},{'id': 'ID #048038',
+'amount': 'N 4530',
+'status':'Completed',
+'date':'9, Feb 2022',
+'time':'2:37 AM',
+},
+];
+const List januaryList = [
+{'id': 'ID #0012345',
+'amount': 'N 3200',
+'status':'Failed',
+'date':'9, Feb 2022',
+'time':'2:37 AM',
+},{'id': 'ID #056778',
+'amount': 'N 1600',
+'status':'Failed',
+'date':'9, Feb 2022',
+'time':'2:37 AM',
+},
+];
