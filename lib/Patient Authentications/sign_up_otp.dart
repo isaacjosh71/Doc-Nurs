@@ -141,12 +141,13 @@ class _SignUpOtpState extends State<SignUpOtp> {
                             phone: phone,
                             otpCode: code);
                         print(otpBody);
-                        authController.verifyCode(otpBody).then((status){
-                          if(!status.isError){
-                            print('successful registration');
+                        // authController.verifyCode(otpBody).then((status){
+                          // if(!status.isError){
+                          //   print('successful registration');
                             Get.to(()=> const CompleteRegistration());
-                          } else{Get.snackbar('Error', status.message);}
-                        });}
+                          // } else{Get.snackbar('Error', status.message);}
+                        // });
+                    }
                     }
                     catch(e){
                       final snackBar = SnackBar(content: Text(e.toString()));

@@ -53,12 +53,12 @@ class _CreateAccountState extends State<CreateAccount> {
           else{
             SignUpBody signUpBody = SignUpBody(name: name, phone: phone, mail: mail, password: password, passwordConfirmation: passwordConfirm);
             print(signUpBody);
-            authController.registration(signUpBody).then((status){
-              if(!status.isError){
-                print('successful registration');
+            // authController.registration(signUpBody).then((status){
+              // if(!status.isError){
+              //   print('successful registration');
                 Get.offAll(()=> SignUpOtp(phoneNo: phone,));
-              } else{Get.snackbar('Error', 'Wrong Authentication');}
-            });
+              // } else{Get.snackbar('Error', 'Wrong Authentication');}
+            // });
           }
         }
         catch(e){
