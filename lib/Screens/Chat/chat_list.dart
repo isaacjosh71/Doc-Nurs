@@ -45,7 +45,7 @@ class _ChatListState extends State<ChatList> {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w),
-              child: SearchBar(
+              child: SearchedBar(
                 child: Row(
                   children: [
                     SvgPicture.asset('assets/svg/Form.svg',
@@ -87,28 +87,29 @@ class _ChatListState extends State<ChatList> {
                         },
                         child: Column(
                           children: [
-                            Dismissible(
-                              secondaryBackground: Container(
-                                height: 53.h, width: 121.w, color: const Color(0xFFE8505B),
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 38.w, vertical: 22.h),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment
-                                        .end,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Icon(Icons.delete_outline_rounded,
-                                        color: const Color(0xFFFFFFFF), size: 12.sp,),
-                                      SizedBox(width: 3.w,),
-                                      Text('Delete', style: TextStyle(color: const Color(0xFFFFFFFF),
-                                          fontSize: 10.sp, fontWeight: FontWeight.w400),)
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              key: UniqueKey(),
-                              onDismissed: (direction) {},
-                              child: SizedBox(
+                            // Dismissible(
+                            //   secondaryBackground: Container(
+                            //     height: 53.h, width: 121.w, color: const Color(0xFFE8505B),
+                            //     child: Padding(
+                            //       padding: EdgeInsets.symmetric(horizontal: 38.w, vertical: 22.h),
+                            //       child: Row(
+                            //         mainAxisAlignment: MainAxisAlignment
+                            //             .end,
+                            //         crossAxisAlignment: CrossAxisAlignment.center,
+                            //         children: [
+                            //           Icon(Icons.delete_outline_rounded,
+                            //             color: const Color(0xFFFFFFFF), size: 12.sp,),
+                            //           SizedBox(width: 3.w,),
+                            //           Text('Delete', style: TextStyle(color: const Color(0xFFFFFFFF),
+                            //               fontSize: 10.sp, fontWeight: FontWeight.w400),)
+                            //         ],
+                            //       ),
+                            //     ),
+                            //   ),
+                            //   key: UniqueKey(),
+                            //   onDismissed: (direction) {},
+                            //   child:
+                              SizedBox(
                                 height: 53.h, width: 329.w,
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -165,7 +166,7 @@ class _ChatListState extends State<ChatList> {
                                   ],
                                 ),
                               ),
-                            ),
+                            // ),
                             SizedBox(height: 10.h,),
                             Container(
                               width: 327.w,

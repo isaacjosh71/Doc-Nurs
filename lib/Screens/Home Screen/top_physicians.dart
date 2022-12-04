@@ -51,7 +51,7 @@ class _TopPhysiciansState extends State<TopPhysicians> {
             SizedBox(height: 16.h,),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w),
-              child: SearchBar(
+              child: SearchedBar(
                 child: Row(
                   children: [
                     IconButton(

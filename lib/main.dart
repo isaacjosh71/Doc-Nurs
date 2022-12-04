@@ -38,7 +38,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'Rubik',
           ),
-          home: token == '' ? const Splash() : const RootPage(),
+          home:
+          // token == '' ? const Splash() :
+          const RootPage(),
         );
       },
     );

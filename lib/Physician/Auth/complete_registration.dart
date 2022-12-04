@@ -6,7 +6,7 @@ import 'package:docs_and_nurs/Screens/root_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:datepicker_dropdown/datepicker_dropdown.dart';
+// import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 import 'package:flutter_dropdown/flutter_dropdown.dart';
 
 class CompletePhysRegistration extends StatefulWidget {
@@ -139,35 +139,35 @@ class _CompletePhysRegistrationState extends State<CompletePhysRegistration> {
                 ),
               ),
               SizedBox(height: 25.h),
-              Text('Date of Birth', style: Designs.labelFont),
-              DropdownDatePicker(
-                icon: Icon(Icons.arrow_drop_down_rounded, size: 25.sp, color: Colors.black87,),
-                isExpanded: true,
-                isDropdownHideUnderline: false,
-                isFormValidator: true,
-                startYear: 1950,
-                endYear: 2030,
-                width: 12.sp,
-                onChangedDay: (String? newValue){
-                  setState((){
-                    _selectedDay = newValue!;});},
-                onChangedMonth: (String? newValue){
-                  setState((){
-                    _selectedMonth = newValue!;});},
-                onChangedYear: (String? newValue){
-                  setState((){
-                    _selectedYear = newValue!;});},
-                hintDay: '$_selectedDay',
-                hintMonth: '$_selectedMonth',
-                hintYear: '$_selectedYear',
-                hintTextStyle:Designs.hintFont,
-                monthFlex: 3,
-                dayFlex: 2,
-                errorDay: 'Please select date',
-                errorMonth: 'Please select month',
-                errorYear: 'Please select year',
-              ),
-              SizedBox(height: 25.h),
+              // Text('Date of Birth', style: Designs.labelFont),
+              // DropdownDatePicker(
+              //   icon: Icon(Icons.arrow_drop_down_rounded, size: 25.sp, color: Colors.black87,),
+              //   isExpanded: true,
+              //   isDropdownHideUnderline: false,
+              //   isFormValidator: true,
+              //   startYear: 1950,
+              //   endYear: 2030,
+              //   width: 12.sp,
+              //   onChangedDay: (String? newValue){
+              //     setState((){
+              //       _selectedDay = newValue!;});},
+              //   onChangedMonth: (String? newValue){
+              //     setState((){
+              //       _selectedMonth = newValue!;});},
+              //   onChangedYear: (String? newValue){
+              //     setState((){
+              //       _selectedYear = newValue!;});},
+              //   hintDay: '$_selectedDay',
+              //   hintMonth: '$_selectedMonth',
+              //   hintYear: '$_selectedYear',
+              //   hintTextStyle:Designs.hintFont,
+              //   monthFlex: 3,
+              //   dayFlex: 2,
+              //   errorDay: 'Please select date',
+              //   errorMonth: 'Please select month',
+              //   errorYear: 'Please select year',
+              // ),
+              // SizedBox(height: 25.h),
               Text('Address', style: Designs.labelFont),
               SizedBox(
                 width: 325.w,

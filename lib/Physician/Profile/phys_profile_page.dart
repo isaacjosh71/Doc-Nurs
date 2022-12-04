@@ -21,7 +21,7 @@ class PhysicianProfilePage extends StatelessWidget {
         backgroundColor: Designs.scaffoldTheme,
         flexibleSpace: Padding(
           padding: EdgeInsets.only(left: 24.w, top: 59.h),
-          child: Text('Profile',
+          child: Text('Profiler',
             textAlign: TextAlign.start,
             style: TextStyle(
               color: const Color(0xFF0F0F0F),

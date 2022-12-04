@@ -92,7 +92,8 @@ class _SelectPlanState extends State<SelectPlan> {
                   ),
                 ),
               ),
-              SizedBox(height: 10.h,),Container(
+              SizedBox(height: 10.h,),
+              Container(
                 height: 100.h, width: 314.w,
                 decoration: BoxDecoration(
                   color: Designs.whiteColor,

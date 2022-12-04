@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 13.h,),
             Padding(
               padding: EdgeInsets.only(left: 25.w, right: 20.w),
-              child: SearchBar(
+              child: SearchedBar(
                 child: Row(
                   children: [
                     IconButton(

@@ -1,6 +1,7 @@
 import 'package:docs_and_nurs/Patient Authentications/create_account_option.dart';
 import 'package:docs_and_nurs/Patient Authentications/log_in_number.dart';
 import 'package:docs_and_nurs/Helpers/designs.dart';
+import 'package:docs_and_nurs/Screens/root_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -112,7 +113,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),)
                     ),
                     onPressed: () {
-                      Get.to(()=> const LogInNumber());
+                      Get.to(()=> const RootPage());
                     },
                     child: const Text('Log In'),),
                 ),

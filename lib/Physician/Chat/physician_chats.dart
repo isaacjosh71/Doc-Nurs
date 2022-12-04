@@ -48,7 +48,7 @@ class _PhysicianChatListState extends State<PhysicianChatList> {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w),
-              child: SearchBar(
+              child: SearchedBar(
                 child: Row(
                   children: [
                     SvgPicture.asset('assets/svg/Form.svg',
