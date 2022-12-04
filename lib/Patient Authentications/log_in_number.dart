@@ -228,12 +228,12 @@ class _LogInNumberState extends State<LogInNumber> {
                           phone: phone,
                           password: password,
                         );
-                        authController.loginPhone(phoneBody).then((status){
-                          if(!status.isError){
+                        // authController.loginPhone(phoneBody).then((status){
+                        //   if(!status.isError){
                             print('successful registration');
                             Get.offAll(()=> const RootPage());
-                          } else{Get.snackbar('Error', 'Wrong Authentication');}
-                        });
+                        //   } else{Get.snackbar('Error', 'Wrong Authentication');}
+                        // });
                       }
                     // catch(e){
                     //   final snackBar = SnackBar(content: Text(e.toString()));

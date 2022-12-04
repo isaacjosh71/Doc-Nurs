@@ -164,12 +164,12 @@ class _LogInEmailState extends State<LogInEmail> {
                         password: password,
                       );
                       print(emailBody);
-                      authController.loginEmail(emailBody).then((status){
-                        if(!status.isError){
+                      // authController.loginEmail(emailBody).then((status){
+                      //   if(!status.isError){
                           print('successful registration');
                           Get.offAll(()=> const RootPage());
-                        } else{Get.snackbar('Error', 'Wrong Authentication');}
-                      });
+                      //   } else{Get.snackbar('Error', 'Wrong Authentication');}
+                      // });
                     }
                     }
                   catch(e){
