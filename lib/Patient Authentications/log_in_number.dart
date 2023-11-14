@@ -6,12 +6,10 @@ import 'package:docs_and_nurs/Patient Authentications/log_in_otp.dart';
 import 'package:docs_and_nurs/Helpers/designs.dart';
 import 'package:docs_and_nurs/Welcome/onboarding.dart';
 import 'package:docs_and_nurs/services/models/loginphone_model.dart';
-import 'package:docs_and_nurs/services/network_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../services/network_handle.dart';
 import 'log_in_email.dart';
 import '../Screens/root_page.dart';
 import '../services/auth_services/auth_ctlr.dart';
@@ -28,7 +26,6 @@ class _LogInNumberState extends State<LogInNumber> {
   final TextEditingController _passController= TextEditingController();
   bool _obscureText = true;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  NetworkHandle networkHandle = NetworkHandle();
   dynamic accessToken;
   @override
   Widget build(BuildContext context) {

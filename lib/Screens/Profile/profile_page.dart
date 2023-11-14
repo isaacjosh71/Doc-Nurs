@@ -39,11 +39,11 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    bool _userLoggedIn = Get.find<AuthController>().userLoggedIn();
-    if (_userLoggedIn) {
-      Get.find<ProfileController>().getUserProfile();
-      print('User Logged In');
-    }
+    // bool _userLoggedIn = Get.find<AuthController>().userLoggedIn();
+    // if (_userLoggedIn) {
+    //   Get.find<ProfileController>().getUserProfile();
+    //   print('User Logged In');
+    // }
     return Scaffold(
         backgroundColor: Designs.scaffoldTheme,
         appBar: AppBar(
@@ -62,9 +62,9 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ),
         body:
-        GetBuilder<ProfileController>(
-          builder: (profControl) {
-            return _userLoggedIn ? (profControl.isLoading ?
+        // GetBuilder<ProfileController>(
+        //   builder: (profControl) {
+        //     return _userLoggedIn ? (profControl.isLoading ?
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,12 +84,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(profControl.data.fullName,
+                            Text("fullName",
                               style: TextStyle(fontSize: 15.sp,
                                   fontWeight: FontWeight.w600,
                                   color: const Color(0xFF1F1F1F)),),
                             SizedBox(height: 6.h),
-                            Text(profControl.data.email,
+                            Text("email",
                               style: TextStyle(fontSize: 15.sp,
                                   fontWeight: FontWeight.w400,
                                   color: const Color(0xFF767676)),),
@@ -246,11 +246,12 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 )
               ],
-            ) :
-            const Center(child: CircularProgressIndicator(),))
-                : const Center(child: Text('Profile Page'),);
-          },
-        )
+            )
+            // :
+            // const Center(child: CircularProgressIndicator(),))
+            //     : const Center(child: Text('Profile Page'),);
+          // }
+        // )
     );
   }
   }

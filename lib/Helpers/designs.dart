@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class Designs {
   static const primaryColor = Color(0xFF3F8BCA);
@@ -36,4 +38,6 @@ class Designs {
       fontWeight: FontWeight.w400,
       fontStyle: FontStyle.normal
   );
+  static double screenHeight = Get.context!.height;
+  static double screenWidth = Get.context!.width;
 }

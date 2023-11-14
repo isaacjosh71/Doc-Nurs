@@ -5,7 +5,6 @@ import 'package:docs_and_nurs/Helpers/designs.dart';
 import 'package:docs_and_nurs/Screens/root_page.dart';
 import 'package:docs_and_nurs/Welcome/onboarding.dart';
 import 'package:docs_and_nurs/services/models/logInEmail_model.dart';
-import 'package:docs_and_nurs/services/network_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -24,7 +23,6 @@ class _LogInEmailState extends State<LogInEmail> {
   final TextEditingController _passController= TextEditingController();
   bool _obscureText = true;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  NetworkHandler networkHandler = NetworkHandler();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

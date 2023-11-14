@@ -5,7 +5,6 @@ import 'package:docs_and_nurs/Screens/root_page.dart';
 import 'package:docs_and_nurs/services/auth_services/auth_ctlr.dart';
 import 'package:docs_and_nurs/services/models/otp_model.dart';
 import 'package:docs_and_nurs/services/models/sign_up_body_model.dart';
-import 'package:docs_and_nurs/services/network_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -27,7 +26,6 @@ class _CreateAccountState extends State<CreateAccount> {
   bool _obscureText = true; bool _reObscureText = true;
   bool buttonIsActive = false;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  NetworkHandler networkHandler = NetworkHandler();
   @override
   Widget build(BuildContext context) {
     var _onPressed;

@@ -56,7 +56,7 @@ class _CreatePhysicianAccountState extends State<CreatePhysicianAccount> {
               passwordConfirmation: passwordConfirm,
             );
             authController.physicianRegistration(signUpPhysBody).then((status){
-              if(status.isError){
+              if(status.isSuccess){
                 print('Successful Registration');
                 Get.to(()=> SignUpPhysicianOtp(phoneNo: phone,));
               }

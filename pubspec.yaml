@@ -26,6 +26,11 @@ dependencies:
   http: ^0.13.5
   group_radio_button: ^1.2.0
   logger: ^1.1.0
+  flutter_paystack: ^1.0.7
+#  geolocator: ^10.1.0
+#  geocoding: ^2.1.1
+#  google_maps_flutter: ^2.5.0
+  intl: ^0.17.0
 
   cupertino_icons: ^1.0.2
 

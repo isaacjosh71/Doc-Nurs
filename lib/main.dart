@@ -1,4 +1,5 @@
 
+import 'package:docs_and_nurs/Screens/Home%20Screen/appointment_successful.dart';
 import 'package:docs_and_nurs/services/data/app_urls.dart';
 import 'package:docs_and_nurs/Screens/root_page.dart';
 import 'package:flutter/material.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
           home:
           // token == '' ? const Splash() :
           const RootPage(),
+          // const AppointmentSuccessful(),
         );
       },
     );

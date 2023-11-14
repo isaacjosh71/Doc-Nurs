@@ -1,9 +1,11 @@
 
+import 'package:docs_and_nurs/Screens/root_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-
+import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import '../../Helpers/designs.dart';
 
 class AppointmentSuccessful extends StatelessWidget {
@@ -11,6 +13,8 @@ class AppointmentSuccessful extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('EEE d MMM').format(now);
     return Scaffold(
       body: Column(
         children: [
@@ -37,13 +41,14 @@ class AppointmentSuccessful extends StatelessWidget {
                     text: TextSpan(
                         children: [
                           TextSpan(
-                              text: ' scheduled for',
+                              text: ' scheduled for ',
                               style: TextStyle(color: const Color(0xFF767676),
                                   fontSize: 15.sp, letterSpacing: -0.33.sp,
                                   fontWeight: FontWeight.w400
                               )),
+
                           TextSpan(
-                              text: ' Wed. 09, Jan 22',
+                              text: formattedDate,
                               style: TextStyle(color: const Color(0xFF1F1F1F),
                                   fontSize: 15.sp,letterSpacing: -0.33.sp,
                                   fontWeight: FontWeight.w600
@@ -198,7 +203,9 @@ class AppointmentSuccessful extends StatelessWidget {
                         fontStyle: FontStyle.normal
                     ),)
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  Get.off(()=> const RootPage());
+                },
                 child: const Center(child: Text('Ok')),),
             ),
           ),

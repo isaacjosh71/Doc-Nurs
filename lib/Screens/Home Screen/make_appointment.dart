@@ -2,6 +2,7 @@
 import 'package:date_picker_timeline/date_picker_widget.dart';
 import 'package:docs_and_nurs/Helpers/designs.dart';
 import 'package:docs_and_nurs/Screens/Home%20Screen/appointment_successful.dart';
+import 'package:docs_and_nurs/services/data/paystack_payment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dropdown/flutter_dropdown.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,12 +24,15 @@ class _MakeAppointmentState extends State<MakeAppointment> {
     'Me', 'Third-party'];
   final TextEditingController _commentController = TextEditingController();
   bool buttonIsActive = false;
+  int price = 2500;
+  String email = 'e@email.com';
   @override
   Widget build(BuildContext context) {
     var _onPressed;
     if(buttonIsActive){
       _onPressed=(){
-        Get.to(()=> const AppointmentSuccessful());
+        MakePayment(ctx: context, email: email, price: price).chargeCard();
+        // Get.to(()=> const AppointmentSuccessful());
       };
     }
     return Scaffold(
@@ -63,7 +67,7 @@ class _MakeAppointmentState extends State<MakeAppointment> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 12.h,),
+              SizedBox(height: 10.h,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +75,7 @@ class _MakeAppointmentState extends State<MakeAppointment> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(12.r),
                     child: Image.asset('assets/images/Frame 1000000947.png',
-                      width: 45.w, height: 45.h, fit: BoxFit.cover,),
+                      width: 50.w, height: 55.h, fit: BoxFit.cover,),
                   ),
                   SizedBox(width: 10.w,),
                   Expanded(
@@ -85,9 +89,15 @@ class _MakeAppointmentState extends State<MakeAppointment> {
                           color: const Color(0xFF0F0F0F),
                         ),),
                         SizedBox(height: 3.sp,),
-                        Text('Hepatologist', style: TextStyle(
+                        Text(email, style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 13.sp,
+                          color: const Color(0xFFAAAAAA),
+                        ),),
+                        SizedBox(height: 3.sp,),
+                        Text('Hepatologist', style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 11.sp,
                           color: const Color(0xFFAAAAAA),
                         ),),
                       ],
@@ -247,7 +257,7 @@ class _MakeAppointmentState extends State<MakeAppointment> {
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(left: 20.w, top: 21.h, bottom: 21.h),
-                  child: Text('N 2,500.00', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp,
+                  child: Text('2500', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp,
                   color: const Color(0xFF373737)), )
                 ),
               ),

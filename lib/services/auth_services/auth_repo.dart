@@ -62,8 +62,8 @@ class AuthRepo {
 
  Future<void> savePhoneNumberAndPassword(String number, String password)async {
     try{
-      await sharedPreferences.setString(APPURLS.PHONE, number);
-      await sharedPreferences.setString(APPURLS.PASSWORD, password);
+      // await sharedPreferences.setString(APPURLS.PHONE, number);
+      // await sharedPreferences.setString(APPURLS.PASSWORD, password);
     }catch(e){
       throw e;
     }
@@ -71,8 +71,8 @@ class AuthRepo {
 
  bool clearedSharedData (){
     sharedPreferences.remove(APPURLS.TOKEN);
-    sharedPreferences.remove(APPURLS.PASSWORD);
-    sharedPreferences.remove(APPURLS.PHONE);
+    // sharedPreferences.remove(APPURLS.PASSWORD);
+    // sharedPreferences.remove(APPURLS.PHONE);
     apiClient.token="";
     apiClient.updateHeader("");
     return true;

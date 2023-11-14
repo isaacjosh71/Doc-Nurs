@@ -5,9 +5,7 @@ import 'package:docs_and_nurs/Patient Authentications/complete_registration.dart
 import 'package:docs_and_nurs/Patient Authentications/create_patient_account.dart';
 import 'package:docs_and_nurs/Screens/root_page.dart';
 import 'package:docs_and_nurs/services/models/otp_model.dart';
-import 'package:docs_and_nurs/services/network_handler.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../Helpers/designs.dart';
@@ -23,7 +21,6 @@ class SignUpOtp extends StatefulWidget {
 
 class _SignUpOtpState extends State<SignUpOtp> {
   final TextEditingController _code = TextEditingController();
-  NetworkHandler networkHandler = NetworkHandler();
   int start = 60;
   bool wait = false;
   bool request = false;

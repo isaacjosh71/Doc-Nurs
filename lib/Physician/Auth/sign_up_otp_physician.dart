@@ -139,7 +139,7 @@ class _SignUpPhysicianOtpState extends State<SignUpPhysicianOtp> {
                             phone: phone,
                           );
                           authController.physicianVerifyCode(otpPhysBody).then((status){
-                            if(!status.isError){
+                            if(!status.isSuccess){
                               print('successful registration');
                               Get.to(()=> const CompleteRegistration());
                             } else{Get.snackbar('Error', status.message);}

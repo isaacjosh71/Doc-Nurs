@@ -1,11 +1,11 @@
 
 class ResponseModel{
-  bool _isError;
+  bool _isSuccess;
   String _message;
   ResponseModel(
-    this._isError, this._message
-);
+      this._isSuccess, this._message
+      );
   String get message => _message;
-  bool get isError => _isError;
+  bool get isSuccess => _isSuccess;
 
 }

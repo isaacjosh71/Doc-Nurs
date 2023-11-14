@@ -145,7 +145,7 @@ class _LogInOtpState extends State<LogInOtp> {
                           phone: phone,
                         );
                         authController.verifyCode(otpBody).then((status){
-                          if(!status.isError){
+                          if(!status.isSuccess){
                             print('successful registration');
                             Get.to(()=> const RootPage());
                           } else{Get.snackbar('Error', 'Error');}
